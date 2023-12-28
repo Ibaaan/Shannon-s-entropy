@@ -26,9 +26,10 @@ for(let i in alph){
 }
 if(ent !== 0)
     ent *= -1;
-console.log("Entrophy", ent);
+let output = `Entrophy: ${ent}` + "\n";
 
 for (let i in alph){
-    console.log(i, alph[i] / len);
+    output += `${i} ${alph[i] / len}`  + "\n";
     dum +=alph[i]/ len; 
 }
+fs.writeFileSync("output.txt", output);
